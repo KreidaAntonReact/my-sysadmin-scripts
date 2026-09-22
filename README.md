@@ -1,1 +1,4 @@
 # my-sysadmin-scripts
+
+Скрипт читает `/var/log/syslog`, отбирает строки со словами `error`/`fail` и записывает их в
+`report.txt`.
