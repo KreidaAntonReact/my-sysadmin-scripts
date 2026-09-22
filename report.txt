@@ -1,0 +1,11 @@
+Sep 20 15:28:19 sysadmin-host kernel: [    0.000000] NUMA: Failed to initialise from firmware
+Sep 20 15:28:19 sysadmin-host cloud-init[596]: 2026-09-20 15:28:18,368 - schema.py[WARNING]: cloud-config failed schema validation! You may run 'sudo cloud-init schema --system' to check the details.
+Sep 20 15:28:19 sysadmin-host systemd[1]: Condition check resulted in Process error reports when automatic reporting is enabled (file watch) being skipped.
+Sep 20 15:28:19 sysadmin-host systemd[1]: Condition check resulted in Process error reports when automatic reporting is enabled (timer based) being skipped.
+Sep 20 15:28:19 sysadmin-host systemd[1]: Started Download data for packages that failed at package install time.
+Sep 20 15:28:19 sysadmin-host kernel: [    0.261404] GPT: Use GNU Parted to correct GPT errors.
+Sep 20 15:28:19 sysadmin-host kernel: [    3.064134] EXT4-fs (sda1): re-mounted. Opts: discard,errors=remount-ro. Quota mode: none.
+Sep 20 15:28:19 sysadmin-host systemd[1]: Starting GRUB failed boot detection...
+Sep 20 15:28:19 sysadmin-host systemd[1]: Finished GRUB failed boot detection.
+Sep 20 15:33:20 sysadmin-host systemd[1]: Starting Download data for packages that failed at package install time...
+Sep 20 15:33:20 sysadmin-host systemd[1]: Finished Download data for packages that failed at package install time.
