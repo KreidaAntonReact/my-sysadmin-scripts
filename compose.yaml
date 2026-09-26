@@ -1,0 +1,10 @@
+services:
+  my-sysadmin:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: my-sysadmin
+    ports:
+      - 8080:8080
+    volumes:
+      - /var/log:/var/log:ro
