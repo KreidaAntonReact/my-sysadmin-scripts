@@ -1,9 +1,8 @@
 services:
-  my-sysadmin:
+  my-app:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: my-sysadmin
     ports:
       - 8080:8080
     volumes:
