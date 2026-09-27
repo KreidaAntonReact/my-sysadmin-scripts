@@ -1,0 +1,15 @@
+[Unit]
+Description=my-app service
+After=docker.service
+Requires=docker.service
+
+[Service]
+User=ubuntu
+Group=docker
+WorkingDirectory=/home/ubuntu/my-sysadmin-scripts
+ExecStart=/usr/bin/docker compose up --build
+ExecStop=/usr/bin/docker compose down
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
