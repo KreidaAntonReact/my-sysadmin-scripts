@@ -66,7 +66,7 @@ echo
 if [ "$READY" = yes ]; then
     curl -ksI https://127.0.0.1/ | head -1
 else
-    echo "ВНИМАНИЕ: сервис не ответил за ~2 минуты."
+    echo "ВНИМАНИЕ: сервис не ответил"
     echo "Смотрите: sudo systemctl status my-app и docker compose logs"
 fi
 
