@@ -49,8 +49,28 @@ sudo systemctl restart my-app
 sleep 3
 
 echo "== 4. Самопроверка =="
-curl -ksI https://127.0.0.1/ | head -1
+printf "Ожидание готовности сервиса"
+
+READY=no
+
+for i in $(seq 1 60); do
+    if curl -ksf -o /dev/null https://127.0.0.1/; then
+        READY=yes
+        break
+    fi
+    printf "."
+    sleep 2
+done
+echo
+
+if [ "$READY" = yes ]; then
+    curl -ksI https://127.0.0.1/ | head -1
+else
+    echo "ВНИМАНИЕ: сервис не ответил за ~2 минуты."
+    echo "Смотрите: sudo systemctl status my-app и docker compose logs"
+fi
+
 cat /proc/mdstat
-df -h | grep -E "raid|logs"
+df -h | grep -E "raid|logs" || echo "ВНИМАНИЕ: тома RAID/LVM не смонтированы"
 sudo systemctl status my-app --no-pager
 echo "bootstrap.sh: готово"
